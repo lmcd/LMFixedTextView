@@ -30,6 +30,7 @@ NSString *const LMFixedTextAttributeName = @"LMFixedText";
 	}];
 	
 	[super setAttributedText:attributedText];
+	[self setSelectedTextRange:self.selectedTextRange];
 }
 
 - (void)setSelectedTextRange:(UITextRange *)selectedTextRange
