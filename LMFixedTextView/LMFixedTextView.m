@@ -37,22 +37,30 @@ NSString *const LMFixedTextAttributeName = @"LMFixedText";
 {
 	[super setSelectedTextRange:selectedTextRange];
 	
-	if (self.suffixLength == 0) {
-		return;
-	}
-	
 	NSRange range = self.selectedRange;
-	NSInteger suffixLength = self.suffixLength + 1;
-	NSRange suffixRange = NSMakeRange([self.text length] - suffixLength, suffixLength);
 	
-	// If the start of the selection is past the hashtag suffix
-	if (range.location > suffixRange.location) {
-		self.selectedRange = NSMakeRange(suffixRange.location, 0);
+	if (self.prefixLength > 0) {
+		NSInteger prefixLength = self.prefixLength + 1;
+		
+		// If the start of the selection is past the hashtag suffix
+		if (range.location < prefixLength) {
+			self.selectedRange = NSMakeRange(prefixLength, 0);
+		}
 	}
-	// If the end of the selection crosses over into the hashtag suffix
-	else if (range.location + range.length > suffixRange.location) {
-		int length = [self.text length] - suffixRange.length - range.location;
-		self.selectedRange = NSMakeRange(range.location, length);
+	
+	if (self.suffixLength > 0) {
+		NSInteger suffixLength = self.suffixLength + 1;
+		NSRange suffixRange = NSMakeRange([self.text length] - suffixLength, suffixLength);
+		
+		// If the start of the selection is past the hashtag suffix
+		if (range.location > suffixRange.location) {
+			self.selectedRange = NSMakeRange(suffixRange.location, 0);
+		}
+		// If the end of the selection crosses over into the hashtag suffix
+		else if (range.location + range.length > suffixRange.location) {
+			int length = [self.text length] - suffixRange.length - range.location;
+			self.selectedRange = NSMakeRange(range.location, length);
+		}
 	}
 }
 
