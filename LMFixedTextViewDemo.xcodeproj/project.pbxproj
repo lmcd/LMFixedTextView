@@ -54,8 +54,8 @@
 		16B1598C1878B288000D3033 /* LMFixedTextViewDemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LMFixedTextViewDemoTests-Info.plist"; sourceTree = "<group>"; };
 		16B1598E1878B288000D3033 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		16B159901878B288000D3033 /* LMFixedTextViewDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LMFixedTextViewDemoTests.m; sourceTree = "<group>"; };
-		16B1599B1878B29C000D3033 /* LMFixedTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMFixedTextView.h; sourceTree = "<group>"; };
-		16B1599C1878B29C000D3033 /* LMFixedTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMFixedTextView.m; sourceTree = "<group>"; };
+		16B1599B1878B29C000D3033 /* LMFixedTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LMFixedTextView.h; path = LMFixedTextView/LMFixedTextView.h; sourceTree = "<group>"; };
+		16B1599C1878B29C000D3033 /* LMFixedTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LMFixedTextView.m; path = LMFixedTextView/LMFixedTextView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -476,6 +476,7 @@
 				16B159961878B288000D3033 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		16B159971878B288000D3033 /* Build configuration list for PBXNativeTarget "LMFixedTextViewDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -484,6 +485,7 @@
 				16B159991878B288000D3033 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
